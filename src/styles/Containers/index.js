@@ -16,3 +16,13 @@ const Container = styled.div`
   text-align: ${(props) => props.textAlign};
   transition: ${(props) => props.transition};
 `;
+
+const FlexibleContainer = styled(Container)`
+  display: flex;
+  flex-direction: ${(props) => props.direction || "row"};
+  justify-content: ${(props) => props.justify || "flex-start"};
+  align-items: ${(props) => props.align || "flex-start"};
+  flex-wrap: ${(props) => props.wrap};
+`;
+
+export { Container, FlexibleContainer };
